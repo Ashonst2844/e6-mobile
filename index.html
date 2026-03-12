@@ -17,6 +17,10 @@
           <input type="radio" name="navRadio" id="aboutNav" />
           <label for="aboutNav">About</label>
         </div>
+        <div class="nav-button" onclick="goToPage('ranked')">
+          <input type="radio" name="navRadio" id="rankNav" />
+          <label for="rankNav">Ranked</label>
+        </div>
         <div class="nav-button" onclick="goToPage('operators')">
           <input type="radio" name="navRadio" id="operatorsNav" />
           <label for="operatorsNav">Operators</label>
@@ -54,7 +58,53 @@
         /></a>
       </div>
     </section>
-    <section id="about" style="width: 100%; height: 100vh"></section>
+    <section id="about">
+      <div class="about-slides">
+        <h2>Now On Mobile</h2>
+        <img src="src/img/asset/about-1.jpg" />
+        <p>
+          "From the acclaimed Tom Clancy's Rainbow Six franchise, Rainbow Six
+          Mobile is a competitive online tactical action shooter FPS built
+          specifically for online mobile action."
+        </p>
+      </div>
+      <div class="about-slides">
+        <h2>Attacker VS Defender</h2>
+        <img src="src/img/asset/about-2.jpg" />
+        <p>
+          "Compete in Rainbow Six's classic Attack vs. Defense game modes. Play
+          as an Attacker or Defender in fast-paced 5v5 matches and face intense
+          close-quarter combat while making timely tactical decisions."
+        </p>
+      </div>
+      <div class="about-slides">
+        <h2>Massive Playable Operators</h2>
+        <img src="src/img/asset/about-3.jpg" />
+        <p>
+          "Choose from dozens of elite Operators, each equipped with unique
+          gadgets, playstyles, and specialized abilities. Whether you prefer
+          tactical scouting or heavy-hitting breaches, there’s an Operator for
+          every strategy."
+        </p>
+      </div>
+      <div class="about-slides">
+        <h2>Realistic Tactical Combat</h2>
+        <img src="src/img/asset/about-4.jpg" />
+        <p>
+          "Strategy is your greatest weapon. In Rainbow Six Mobile, victory
+          isn't just about fast reflexes—it’s about outsmarting your opponents
+          with authentic tactical maneuvers, coordinated breaches, and
+          calculated risks."
+        </p>
+      </div>
+
+      <button id="left" onclick="changeSlide(-1)">
+        <img src="src/img/icon/prev.svg" />
+      </button>
+      <button id="right" onclick="changeSlide(1)">
+        <img src="src/img/icon/next.svg" />
+      </button>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

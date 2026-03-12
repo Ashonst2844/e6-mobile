@@ -14,6 +14,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 body {
   background: black;
@@ -39,6 +40,16 @@ section {
     transform: skewX(10deg);
   }
 }
+@keyframes slide {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 #header {
   width: 100%;
@@ -51,7 +62,7 @@ section {
   z-index: 1000;
 }
 #header nav {
-  width: 60%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -109,8 +120,6 @@ section {
 #home #titleLogo img {
   width: 400px;
   height: auto;
-  transform: scale(1.5);
-  opacity: 0.6;
 }
 #home #playSect {
   width: 60%;
@@ -142,7 +151,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
 }
 #home #playSect a {
   background: none;
@@ -168,4 +176,58 @@ section {
 }
 #home #playSect button:hover > span {
   margin-inline: 10px;
+}
+
+#about {
+  width: 100%;
+  height: 100vh;
+}
+#about .about-slides {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#about .about-slides h2 {
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  padding: 10px;
+  color: black;
+  transform: skewX(-20deg);
+  text-transform: uppercase;
+}
+#about .about-slides img {
+  width: 100%;
+  height: 100%;
+  margin-block: 10px;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+#about .about-slides p {
+  text-align: center;
+}
+#about button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: black;
+  border: 1px solid var(--primary);
+}
+#about #left {
+  left: 30px;
+}
+#about #right {
+  right: 30px;
+}
+#about button:hover {
+  box-shadow: 0 0 10px var(--primary);
+  background-color: var(--primary);
+}
+#about button:hover > img {
+  filter: brightness(0);
 }
