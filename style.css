@@ -1,0 +1,171 @@
+:root {
+  --main: black;
+  --primary: rgb(0, 237, 237);
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+}
+body {
+  background: black;
+  background: radial-gradient(circle, var(--main) 70%, rgb(0, 83, 83) 90%);
+}
+section {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@keyframes shine {
+  0% {
+    transform: translateX(0);
+    transform: skewX(10deg);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+    transform: skewX(10deg);
+  }
+}
+
+#header {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+#header nav {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header nav .nav-button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-transform: uppercase;
+}
+#header nav .nav-button label {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#header nav .nav-button label:hover,
+#header nav .nav-button input[name="navRadio"]:checked ~ label {
+  background-color: rgb(43, 43, 43);
+  border-bottom: 2px solid var(--primary);
+}
+#header nav .nav-button input[name="navRadio"] {
+  display: none;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  background: url(src/img/asset/splash-screen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0) 90%);
+}
+#home #titleLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home #titleLogo img {
+  width: 400px;
+  height: auto;
+  transform: scale(1.5);
+  opacity: 0.6;
+}
+#home #playSect {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#home #playSect p {
+  width: 100%;
+  margin-block: 20px;
+  color: white;
+  z-index: 50;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+}
+#home #playSect button,
+#home #playSect a {
+  width: 200px;
+  height: 60px;
+  background-color: var(--primary);
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow-x: hidden;
+  position: relative;
+  margin-inline: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#home #playSect a {
+  background: none;
+}
+#home #playSect a img {
+  width: 100%;
+  height: 100%;
+}
+#home #playSect button .shine-effect {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  background-color: rgba(142, 255, 255, 0.752);
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+#home #playSect button:hover .shine-effect {
+  animation: shine infinite 3s;
+}
+#home #playSect button:hover {
+  box-shadow: 0 0 20px var(--primary);
+}
+#home #playSect button:hover > span {
+  margin-inline: 10px;
+}
