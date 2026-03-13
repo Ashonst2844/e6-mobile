@@ -42,10 +42,13 @@
       </div>
       <div id="playSect">
         <p>Available On</p>
-        <button onclick="goToPage('about')">
+        <a
+          href="https://www.ubisoft.com/en-sg/game/rainbow-six/mobile"
+          target="_blank"
+        >
           <div class="shine-effect"></div>
           Play Now! <span>></span>
-        </button>
+        </a>
         <a
           href="https://play.google.com/store/apps/details?id=com.ubisoft.rainbowsixmobile.r6.fps.pvp.shooter&hl=id"
           target="_blank"
@@ -116,7 +119,64 @@
       </button>
     </section>
 
-    <section id="ranked"></section>
+    <section id="ranked">
+      <h1>Ranked</h1>
+      <div id="rankBox">
+        <div id="rankInfo">
+          <h2>Ranked Match</h2>
+          <div>
+            <li>
+              Ranked Match contains 7 level : Copper, Bronze, Silver, Gold,
+              Platinum, Emerald, Diamond
+            </li>
+            <li>
+              Every Ranks contains 4 Division V-I : V, IV, III, II, I, and ned 2-5 Poin to Rank Up
+            </li>
+            <li>
+              After Completing Diamond rank, you can push forward to Champions Ranks with 1000+ Poin
+            </li>
+          </div>
+        </div>
+        <di id="ranks">
+          <img src="src/img/ranks/copper.avif" title="Copper"/>
+          <img src="src/img/ranks/bronze.avif" title="Bronze"/>
+          <img src="src/img/ranks/silver.avif" title="Silver"/>
+          <img src="src/img/ranks/gold.avif" title="Gold"/>
+          <img src="src/img/ranks/platinum.avif" title="Platinum"/>
+          <img src="src/img/ranks/emerald.avif" title="Emerald"/>
+          <img src="src/img/ranks/diamond.avif" title="Diamond"/>
+        </div>
+      </div>
+    </section>
+    <section id="operators">
+      <h1>Operators</h1>
+      <div id="operatorsBox">
+        <div id="operatorTabs">
+          <div class="operator-button ">
+            <input
+            type="radio"
+            name="operator"
+            id="attacker"
+            value="attacker"
+            checked
+            /><label for="attacker">Attacker</label>
+          </div>
+          <div class="operator-button">
+            <input
+            type="radio"
+            name="operator"
+            id="defender"
+            value="defender"
+            /><label for="defender">Defender</label>
+          </div>
+        </div>
+        <div id="operatorLists">
+          <div id="attackerList" class="display active"></div>
+          <div id="defenderList" class="display"></div>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
   </body>
 </html>

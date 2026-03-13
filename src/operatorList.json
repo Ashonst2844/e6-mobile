@@ -1,0 +1,197 @@
+[
+    {
+        "attacker" : [
+            {
+                "name" : "ash",
+                "primary" : "R4-C",
+                "secondary" : "5.7 USG",
+                "gadget" : "Stun Granades",
+                "ability" : "Breaching Rounds"
+            },
+            {
+                "name" : "buck",
+                "primary" : "C8-SFW",
+                "secondary" : "SDP 9mm",
+                "gadget" : "Frag Granade",
+                "ability" : "Skelaton Key"
+            },
+            {
+                "name" : "capitão",
+                "primary" : "M249",
+                "secondary" : "Keratos .40",
+                "gadget" : "Claymore",
+                "ability" : "Tactical Crossbow"
+            },
+            {
+                "name" : "deimos",
+                "primary" : "Reeves '73",
+                "secondary" : ".44 Vendetta",
+                "gadget" : "Flash Granade",
+                "ability" : "DeathMARK Tracker"
+            },
+            {
+                "name" : "dokkaebi",
+                "primary" : "MK 14 EBR",
+                "secondary" : "9R3",
+                "gadget" : "Smoke Granade",
+                "ability" : "Logic Bomb, And Camera Hack"
+            },
+            {
+                "name" : "glaz",
+                "primary" : "OTs-03",
+                "secondary" : "AP30",
+                "gadget" : "Smoke Granade",
+                "ability" : "Thermal Flip Scope"
+            },
+            {
+                "name" : "hibana",
+                "primary" : "Type-89 CQB",
+                "secondary" : "93R",
+                "gadget" : "Stun Granades",
+                "ability" : "X-Kairos Launcher"
+            },
+            {
+                "name" : "lion",
+                "primary" : "HK437",
+                "secondary" : "P9",
+                "gadget" : "Flash Granade",
+                "ability" : "EE-ONE-D"
+            },
+            {
+                "name" : "recruit-atk",
+                "primary" : "M4",
+                "secondary" : "SDP 9mm",
+                "gadget" : "Breach Charge",
+                "ability" : "Frag Granade"
+            },
+            {
+                "name" : "sledge",
+                "primary" : "L85A2",
+                "secondary" : "SMG-11",
+                "gadget" : "Frag Granade",
+                "ability" : "Tactical Breaching Hammer"
+            },
+            {
+                "name" : "thatcher",
+                "primary" : "L1A1",
+                "secondary" : "SDP 9mm",
+                "gadget" : "Claymore",
+                "ability" : "EMP Granades"
+            },
+            {
+                "name" : "thermite",
+                "primary" : "552-Com",
+                "secondary" : "5.7 USG",
+                "gadget" : "Claymore",
+                "ability" : "Exothermic Charge"
+            },
+            {
+                "name" : "twitch",
+                "primary" : "F2",
+                "secondary" : "P9",
+                "gadget" : "Claymore",
+                "ability" : "Shock Drone"
+            },
+            {
+                "name" : "ying",
+                "primary" : "T-95 LSW",
+                "secondary" : "LFP 686",
+                "gadget" : "Breach Charge",
+                "ability" : "Candela Device"
+            }
+        ],
+        "defender" : [
+            {
+                "name" : "bandit",
+                "primary" : "MP7",
+                "secondary" : "5.7 USG",
+                "gadget" : "Barbed Wire",
+                "ability" : "Shock Wire"
+            },
+            {
+                "name" : "castle",
+                "primary" : "PCC-45",
+                "secondary" : "ITA12S",
+                "gadget" : "Bulletproof Camera",
+                "ability" : "Armor Panel"
+            },
+            {
+                "name" : "caveira",
+                "primary" : "Origin-12",
+                "secondary" : "Luison",
+                "gadget" : "Impact Granade",
+                "ability" : "Silent Step & Interrogation"
+            },
+            {
+                "name" : "frost",
+                "primary" : "9mm C1",
+                "secondary" : "ITA12S",
+                "gadget" : "Deployable Shield",
+                "ability" : "Welcome Mat"
+            },
+            {
+                "name" : "jäger",
+                "primary" : "416-C",
+                "secondary" : "P9",
+                "gadget" : "Barbed Wire",
+                "ability" : "Magpie Defense System"
+            },
+            {
+                "name" : "kapkan",
+                "primary" : "9x19 VSN",
+                "secondary" : "Bailiff 410",
+                "gadget" : "Nitro Cell",
+                "ability" : "EDD 'Booby Trap'"
+            },
+            {
+                "name" : "maestro",
+                "primary" : "ALDA 5.56",
+                "secondary" : "PT145",
+                "gadget" : "Impact Granade",
+                "ability" : "Evil Eye"
+            },
+            {
+                "name" : "mira",
+                "primary" : "VECTOR .45",
+                "secondary" : "Bailiff 410",
+                "gadget" : "Nitro Cell",
+                "ability" : "Black  Mirror"
+            },
+            {
+                "name" : "mute",
+                "primary" : "M590A1",
+                "secondary" : "AP30",
+                "gadget" : "Nitro Cell",
+                "ability" : "GC90 Signal Disrutor 'Jammer'"
+            },
+            {
+                "name" : "recruit-def",
+                "primary" : "UMP45",
+                "secondary" : "5.7 USG",
+                "gadget" : "Barbed Wire",
+                "ability" : "Extra Impact Granade"
+            },
+            {
+                "name" : "rook",
+                "primary" : "MP5",
+                "secondary" : "D-50",
+                "gadget" : "Bulletproof Camera",
+                "ability" : "'Rhino' Armor Pack"
+            },
+            {
+                "name" : "smoke",
+                "primary" : "M500",
+                "secondary" : "SMG-11",
+                "gadget" : "Deployable Shield",
+                "ability" : "Remote Gas Granade"
+            },
+            {
+                "name" : "valkrie",
+                "primary" : "MPX",
+                "secondary" : "Keratos .40",
+                "gadget" : "Nitro Cell",
+                "ability" : "Black Eye Cameras"
+            }
+        ]
+    }
+]

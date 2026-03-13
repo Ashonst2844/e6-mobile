@@ -27,6 +27,16 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 }
+section h1 {
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  padding: 10px;
+  color: black;
+  transform: skewX(-20deg);
+  text-transform: uppercase;
+  width: 400px;
+  text-align: center;
+}
 @keyframes shine {
   0% {
     transform: translateX(0);
@@ -40,6 +50,19 @@ section {
     transform: skewX(10deg);
   }
 }
+@keyframes shine-2 {
+  0% {
+    transform: translateY(0);
+    transform: skewY(20deg);
+  }
+  50% {
+    transform: translateY(1000%);
+  }
+  100% {
+    transform: translateY(-100%);
+    transform: skewY(20deg);
+  }
+}
 @keyframes slide {
   0% {
     transform: scale(0.5);
@@ -49,6 +72,9 @@ section {
     transform: scale(1);
     opacity: 1;
   }
+}
+#operators #operatorsBox #operatorLists .display.active {
+  display: grid !important;
 }
 
 #header {
@@ -83,6 +109,7 @@ section {
   height: 100%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 #header nav .nav-button label:hover,
 #header nav .nav-button input[name="navRadio"]:checked ~ label {
@@ -137,11 +164,9 @@ section {
   text-align: center;
   font-weight: 600;
 }
-#home #playSect button,
 #home #playSect a {
   width: 200px;
   height: 60px;
-  background-color: var(--primary);
   color: black;
   font-weight: 600;
   text-transform: uppercase;
@@ -152,6 +177,11 @@ section {
   align-items: center;
   justify-content: center;
 }
+#home
+  #playSect
+  a[href="https://www.ubisoft.com/en-sg/game/rainbow-six/mobile"] {
+  background-color: var(--primary);
+}
 #home #playSect a {
   background: none;
 }
@@ -159,7 +189,7 @@ section {
   width: 100%;
   height: 100%;
 }
-#home #playSect button .shine-effect {
+#home #playSect a .shine-effect {
   height: 100%;
   width: 40%;
   position: absolute;
@@ -168,13 +198,13 @@ section {
   left: 0;
   transform: translateX(-100%);
 }
-#home #playSect button:hover .shine-effect {
+#home #playSect a:hover .shine-effect {
   animation: shine infinite 3s;
 }
-#home #playSect button:hover {
+#home #playSect a:hover {
   box-shadow: 0 0 20px var(--primary);
 }
-#home #playSect button:hover > span {
+#home #playSect a:hover > span {
   margin-inline: 10px;
 }
 
@@ -218,6 +248,7 @@ section {
   position: absolute;
   background-color: black;
   border: 1px solid var(--primary);
+  cursor: pointer;
 }
 #about #left {
   left: 30px;
@@ -231,4 +262,139 @@ section {
 }
 #about button:hover > img {
   filter: brightness(0);
+}
+
+#ranked {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#ranked #rankBox {
+  width: 90%;
+  height: 80%;
+  display: flex;
+}
+#ranked #rankBox #rankInfo {
+  width: 30%;
+  height: 100%;
+}
+#ranked #rankBox #rankInfo h2 {
+  width: 100%;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: var(--primary);
+  color: black;
+  height: 10%;
+}
+#ranked #rankBox #rankInfo div {
+  border: 1px solid white;
+  width: 100%;
+  height: 90%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+#ranked #rankBox #rankInfo div li {
+  margin-bottom: 10px;
+}
+#ranked #rankBox #ranks {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+#ranked #rankBox #ranks img {
+  width: 150px;
+  opacity: 0.7;
+  scale: 0.8;
+  position: relative;
+}
+#ranked #rankBox #ranks img:hover {
+  opacity: 1;
+  scale: 1;
+}
+
+#operators {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#operators #operatorsBox {
+  width: 90%;
+  margin-block: 20px;
+}
+#operators #operatorsBox #operatorTabs {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+#operators #operatorsBox #operatorTabs input {
+  display: none;
+}
+#operators #operatorsBox #operatorTabs label {
+  width: 150px;
+  height: 100%;
+  background-color: black;
+  border: 2px solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#operators #operatorsBox #operatorTabs label:hover,
+#operators #operatorsBox #operatorTabs input[name="operator"]:checked ~ label {
+  background-color: var(--primary);
+  box-shadow: 0 0 20px var(--primary);
+  color: black;
+  transform: skewX(-10deg);
+}
+#operators #operatorsBox #operatorLists {
+  width: 100%;
+}
+#operators #operatorsBox #operatorLists .display {
+  display: none;
+  grid-template-columns: auto auto auto auto;
+  width: 100;
+  height: 100%;
+}
+#operators #operatorsBox #operatorLists div .operator-cards {
+  width: 300px;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  scale: 0.8;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.6;
+}
+#operators #operatorsBox #operatorLists div .operator-cards .shining {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  opacity: 0.3;
+  transform: translateY(-200%);
+}
+#operators #operatorsBox #operatorLists div .operator-cards:hover {
+  opacity: 1;
+  scale: 0.9;
+}
+#operators #operatorsBox #operatorLists div .operator-cards:hover .shining {
+  animation: both shine-2 2s;
+}
+#operators #operatorsBox #operatorLists div .operator-cards span {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
 }
