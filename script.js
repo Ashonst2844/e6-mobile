@@ -44,6 +44,7 @@ fetch('src/operatorList.json')
     .then(data => {
         const attacker = document.querySelector('#attackerList');
         const defender = document.querySelector('#defenderList');
+
         const preview = document.getElementById('operatorPreview')
         const namePreview = document.getElementById('namePreview')
         const imgPreview = document.getElementById('imagePreview')
@@ -53,10 +54,10 @@ fetch('src/operatorList.json')
         const primaryPreview = document.getElementById('primaryWeapon')
         const secondaryPreview = document.getElementById('secondaryWeapon')
         const abilityPreview = document.getElementById('abilitySkill')
-        data[0].attacker.forEach((item) => {
+        data.forEach((item) => {
             const cards = document.createElement("div")
             cards.setAttribute("class", "operator-cards")
-            cards.style.backgroundImage = `url(src/img/operators/attacker/${item.name}.avif)`
+            cards.style.backgroundImage = `url(src/img/operators/${item.name}.avif)`
             
             const title = document.createElement("span")
             title.innerText = item.name
@@ -66,37 +67,15 @@ fetch('src/operatorList.json')
 
             cards.appendChild(title)
             cards.appendChild(shining)
-            attacker.appendChild(cards)
+            if (item.type === "attacker") {
+              attacker.appendChild(cards)
+            } else {
+              defender.appendChild(cards)
+            }
+
 
             cards.addEventListener('click', () => {
-              imgPreview.setAttribute("src", `src/img/operators/attacker/${item.name}.avif`)
-              namePreview.innerText = item.name
-              primary.style.backgroundImage = `url(src/img/ability/${item.name}/primary.webp)`
-              secondary.style.backgroundImage = `url(src/img/ability/${item.name}/secondary.webp)`
-              ability.setAttribute("src", `src/img/ability/${item.name}/ability.webp`)
-              primaryPreview.innerText = item.primary
-              secondaryPreview.innerText = item.secondary
-              abilityPreview.innerText = item.ability
-              preview.style.display = "flex"
-            });
-        });
-        data[0].defender.forEach((item) => {
-            const cards = document.createElement("div")
-            cards.setAttribute("class", "operator-cards")
-            cards.style.backgroundImage = `url(src/img/operators/defender/${item.name}.avif)`
-            
-            const title = document.createElement("span")
-            title.innerText = item.name
-
-            const shining = document.createElement("div")
-            shining.setAttribute("class", "shining")
-
-            cards.appendChild(title)
-            cards.appendChild(shining)
-            defender.appendChild(cards)
-
-            cards.addEventListener('click', () => {
-              imgPreview.setAttribute("src", `src/img/operators/defender/${item.name}.avif`)
+              imgPreview.setAttribute("src", `src/img/operators/${item.name}.avif`)
               namePreview.innerText = item.name
               primary.style.backgroundImage = `url(src/img/ability/${item.name}/primary.webp)`
               secondary.style.backgroundImage = `url(src/img/ability/${item.name}/secondary.webp)`
