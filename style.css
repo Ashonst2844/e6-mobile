@@ -14,7 +14,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   scroll-behavior: smooth;
-  scrollbar-width: none;
 }
 body {
   background: black;
@@ -199,7 +198,7 @@ section h1 {
   transform: translateX(-100%);
 }
 #home #playSect a:hover .shine-effect {
-  animation: shine infinite 3s;
+  animation: shine both 3s;
 }
 #home #playSect a:hover {
   box-shadow: 0 0 20px var(--primary);
@@ -209,7 +208,8 @@ section h1 {
 }
 
 #about,
-#ranked {
+#ranked,
+#maps {
   width: 100%;
   height: 100vh;
 }
@@ -269,7 +269,8 @@ section h1 {
   flex-direction: column;
   gap: 10px;
 }
-#ranked #rankBox {
+#ranked #rankBox,
+#maps #mapsBox {
   width: 90%;
   height: 80%;
   display: flex;
@@ -374,6 +375,7 @@ section h1 {
   position: relative;
   overflow: hidden;
   opacity: 0.6;
+  transform: skewX(-5deg);
 }
 #operators #operatorsBox #operatorLists div .operator-cards .shining {
   position: absolute;
@@ -388,13 +390,108 @@ section h1 {
 #operators #operatorsBox #operatorLists div .operator-cards:hover {
   opacity: 1;
   scale: 0.9;
+  transform: skewX(0);
 }
 #operators #operatorsBox #operatorLists div .operator-cards:hover .shining {
   animation: both shine-2 2s;
 }
-#operators #operatorsBox #operatorLists div .operator-cards span {
+#operators #operatorsBox #operatorLists div .operator-cards span,
+#maps #mapsBox .map-cards span {
   font-size: 2rem;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 700;
+}
+#operatorPreview {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#operatorPreview button {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: 2px solid var(--primary);
+  padding: 10px;
+}
+#operatorPreview button:hover {
+  background-color: var(--primary);
+  box-shadow: 0 0 20px var(--primary);
+}
+#operatorPreview button:hover > img {
+  filter: brightness(0);
+}
+#operatorPreview #infoPreview {
+  width: 60%;
+  height: 80%;
+  border: 1px solid white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+#operatorPreview #infoPreview h1 {
+  width: 100%;
+  height: 50px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+#operatorPreview #infoPreview img {
+  width: 70px;
+  height: 70px;
+}
+#operatorPreview #infoPreview span {
+  font-size: 1.5rem;
+  height: 70px;
+  line-height: 70px;
+  font-weight: 700;
+}
+#operatorPreview #infoPreview .weapons {
+  width: 50%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px;
+  position: relative;
+}
+#operatorPreview #infoPreview .weapons span {
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.5rem;
+}
+
+#maps #mapsBox {
+  justify-content: center;
+  align-items: center;
+  display: grid !important;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+#maps #mapsBox .map-cards {
+  width: 300px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  scale: 1;
+  opacity: 0.8;
+}
+#maps #mapsBox .map-cards:hover {
+  scale: 1.1;
+  opacity: 1;
+  box-shadow: 5px 5px 7px black;
+  z-index: 20;
 }

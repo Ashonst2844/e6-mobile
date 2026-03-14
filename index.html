@@ -29,10 +29,6 @@
           <input type="radio" name="navRadio" id="mapsNav" />
           <label for="mapsNav">Maps</label>
         </div>
-        <div class="nav-button" onclick="goToPage('credits')">
-          <input type="radio" name="navRadio" id="creditNav" />
-          <label for="creditNav">Credits</label>
-        </div>
       </nav>
     </section>
 
@@ -126,25 +122,28 @@
           <h2>Ranked Match</h2>
           <div>
             <li>
-              Ranked Match contains 7 level : Copper, Bronze, Silver, Gold,
-              Platinum, Emerald, Diamond
+              Ranked Match contains 7 level : Rookie, Bronze, Silver, Gold,
+              Platinum, Emerald, Master
             </li>
             <li>
-              Every Ranks contains 4 Division V-I : V, IV, III, II, I, and ned 2-5 Poin to Rank Up
+              Each Ranks Divided by 4 Division IV-I : IV, III, II, I.
             </li>
             <li>
-              After Completing Diamond rank, you can push forward to Champions Ranks with 1000+ Poin
+              You can Rank-Up after collecting a certain number of Medals in each Division rank.
+            </li>
+            <li>
+              After Completing Diamond rank, you can push forward to Master Ranks and will stack Medals Indefinitely
             </li>
           </div>
         </div>
         <di id="ranks">
-          <img src="src/img/ranks/copper.avif" title="Copper"/>
+          <img src="src/img/ranks/copper.avif" title="Rookie"/>
           <img src="src/img/ranks/bronze.avif" title="Bronze"/>
           <img src="src/img/ranks/silver.avif" title="Silver"/>
           <img src="src/img/ranks/gold.avif" title="Gold"/>
           <img src="src/img/ranks/platinum.avif" title="Platinum"/>
-          <img src="src/img/ranks/emerald.avif" title="Emerald"/>
-          <img src="src/img/ranks/diamond.avif" title="Diamond"/>
+          <img src="src/img/ranks/emerald.avif" title="Diamond"/>
+          <img src="src/img/ranks/diamond.avif" title="Master"/>
         </div>
       </div>
     </section>
@@ -176,7 +175,26 @@
         </div>
       </div>
     </section>
+    <div id="operatorPreview">
+      <img id="imagePreview"/>
+      <div id="infoPreview">
+        <h1 id="namePreview"></h1>
+        <div class="weapons" id="primary">
+          <span id="primaryWeapon"></span>
+        </div>
+        <div class="weapons" id="secondary">
+          <span id="secondaryWeapon"></span>
+        </div>
+        <img id="ability"><span id="abilitySkill"></span>
+      </div>
+      <button id="close"><img src="src/img/icon/close.svg"></button>
+    </div>
 
+    <section id="maps">
+      <h1>Maps</h1>
+      <div id="mapsBox">
+      </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
